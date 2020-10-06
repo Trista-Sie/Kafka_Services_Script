@@ -16,7 +16,7 @@
 ### 停止Kafka服務
     ```bash
         $ ~/Kafka_Services_Script/Each_Service/ksqldb-stop.sh
-        $ ~/Kafka_Services_Script/Each_Service/schema-registry-stop.sh
-        $ ~/Kafka_Services_Script/Each_Service/kafka-connect-api-stop.sh
+        $ ~/Kafka_Services_Script/Each_Service/rest-proxy-stop.sh
+	$ ~/Kafka_Services_Script/Each_Service/kafka-connect-api-stop.sh
         $ ~/Kafka_Services_Script/stop-major-services.sh
     ```
