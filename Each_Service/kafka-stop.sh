@@ -5,4 +5,4 @@ printf "停止Kafka...\n"
 cd ~/confluent-5.5.1
 
 #停止kafka
-./bin/kafka-server-stop ./etc/kafka/server.properties
+./bin/kafka-server-stop ./etc/kafka/server.properties &
