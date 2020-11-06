@@ -1,5 +1,4 @@
 #!/bin/sh
-printf "開始檢視Kafka services的狀態...\n"
 
 #zookeeper 2181
 zookeeper=$(netstat -tuln | grep ":2181")
