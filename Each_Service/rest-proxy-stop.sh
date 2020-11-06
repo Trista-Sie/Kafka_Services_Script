@@ -5,4 +5,4 @@ printf "停止Rest proxy...\n"
 cd ~/confluent-5.5.1
 
 #停止rest proxy
-./bin/kafka-rest-stop ./etc/kafka-rest/kafka-rest.properties
+./bin/kafka-rest-stop ./etc/kafka-rest/kafka-rest.properties &

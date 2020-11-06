@@ -5,13 +5,19 @@ printf "停止Kafka services...\n"
 cd ~/confluent-5.5.1
 
 #停止schema registry
-./bin/schema-registry-stop ./etc/schema-registry/schema-registry.properties
+~/Kafka_Services_Script/Each_Service/schema-registry-stop.sh &
+echo 等待Schema Registry關閉完成
+sleep 5
+
+#停止control center
+~/Kafka_Services_Script/Each_Service/control-center-stop.sh &
+echo 等待Control Center關閉完成
+sleep 5
 
 #停止kafka
-./bin/kafka-server-stop ./etc/kafka/server.properties
-
+~/Kafka_Services_Script/Each_Service/kafka-stop.sh &
 echo 等待Kafka關閉完成
-sleep 3
+sleep 5
 
 #停止zookeeper
-./bin/zookeeper-server-stop ./etc/kafka/zookeeper.properties
+~/Kafka_Services_Script/Each_Service/zookeeper-stop.sh &

@@ -1,5 +1,5 @@
 #!/bin/bash
-printf "啟動KsqlDB\n"
+printf "啟動KsqlDB...\n"
 
 #進到confluent platform 5.5.1資料夾
 cd ~/confluent-5.5.1

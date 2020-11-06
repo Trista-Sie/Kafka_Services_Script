@@ -1,5 +1,5 @@
 #!/bin/bash
-printf "啟動Kafka\n"
+printf "啟動Kafka...\n"
 
 #進到confluent platform 5.5.1資料夾
 cd ~/confluent-5.5.1

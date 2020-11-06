@@ -5,4 +5,4 @@ printf "停止Zookeeper...\n"
 cd ~/confluent-5.5.1
 
 #停止zookeeper
-./bin/zookeeper-server-stop ./etc/kafka/zookeeper.properties
+./bin/zookeeper-server-stop ./etc/kafka/zookeeper.properties &

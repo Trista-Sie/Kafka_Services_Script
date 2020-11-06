@@ -5,4 +5,4 @@ printf "停止KsqlDB...\n"
 cd ~/confluent-5.5.1
 
 #停止ksqldb
-./bin/ksql-server-stop ./etc/ksqldb/ksql-server.properties
+./bin/ksql-server-stop ./etc/ksqldb/ksql-server.properties &
