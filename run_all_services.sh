@@ -7,6 +7,7 @@ services_status(){
 
     serviceListening "Zookeeper" 2181
     serviceListening "Kafka" 9092
+    serviceListening "Control Center" 9021
     serviceListening "Schema Registry" 8081
     serviceListening "Kafka Connect Api" 8083
     serviceListening "Kafka Rest Proxy" 8082
@@ -32,9 +33,9 @@ serviceListening(){
     #service=`ps aux|grep $2 |grep -v "grep"`
     if [ "$service" != "" ]
     then
-	    echo "$1 on！"
+	    echo "$1 is on"
     else
-        echo "$1 stopped！"
+        echo "$1 stopped"
     fi
 }
 
@@ -48,6 +49,11 @@ run_services(){
     ./bin/kafka-server-start ./etc/kafka/server.properties >/dev/null 2>&1 &
     sleep 8
     check_result kafka $?
+
+    #control center
+    ./bin/control-center-start ./etc/confluent-control-center/control-center-dev.properties >/dev/null 2>&1 &
+    sleep 5
+    check_result cc $?
     
     #schema registry
     ./bin/schema-registry-start ./etc/schema-registry/schema-registry.properties >/dev/null 2>&1 &
