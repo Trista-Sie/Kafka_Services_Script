@@ -17,20 +17,20 @@ else
 	echo "Kafka stopped completed\n"
 fi
 
-#control center 9091
-cc=$(netstat -tuln | grep ":9021")
-if [ "$cc" != "" ]; then
-	echo "Control Center is running on port:9021\n"
-else
-	echo "Control Center stopped completed\n"
-fi
-
 #schema registry 8081
 schema=$(netstat -tuln | grep ":8081")
 if [ "$schema" != "" ]; then
 	echo "Schema Registry is running on port:8081\n"
 else
 	echo "Schema Registry stopped completed\n"
+fi
+
+#control center 9091
+cc=$(netstat -tuln | grep ":9021")
+if [ "$cc" != "" ]; then
+	echo "Control Center is running on port:9021\n"
+else
+	echo "Control Center stopped completed\n"
 fi
 
 #kafka connect rest API 8083

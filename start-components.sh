@@ -1,6 +1,11 @@
 #!/bin/bash
 printf "\n開始啟動Kafka其他元件服務...\n"
 
+#啟動control center
+~/Kafka_Services_Script/Each_Service/control-center.sh &
+echo 等待Control Center啟動完成
+sleep 5
+
 #啟動kafka connect API
 ~/Kafka_Services_Script/Each_Service/kafka-connect-api.sh &
 

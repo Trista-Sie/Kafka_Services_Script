@@ -10,11 +10,6 @@ printf "\n啟動Kafka services三個必要服務\n"
 echo 等待Kafka啟動完成
 sleep 5
 
-#啟動control center
-~/Kafka_Services_Script/Each_Service/control-center.sh &
-echo 等待Control Center啟動完成
-sleep 5
-
 #啟動schema registry
 ~/Kafka_Services_Script/Each_Service/schema-registry.sh &
 echo 等待Schema Registry啟動完成
